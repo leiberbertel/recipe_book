@@ -20,7 +20,7 @@ class FavoritesRecipes extends StatelessWidget {
                   itemCount: favoritesRecipes.length,
                   itemBuilder: (context, index) {
                     final recipe = favoritesRecipes[index];
-                    FavoriteRecipeCard(recipe: recipe);
+                    return FavoriteRecipeCard(recipe: recipe);
                   },
                 );
         },
