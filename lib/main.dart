@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
+import 'package:recipe_book/l10n/generated/app_localizations.dart';
 import 'package:recipe_book/providers/recipe_provider.dart';
 import 'package:recipe_book/screens/home_screen.dart';
 import 'package:recipe_book/screens/favorites_recipes.dart';
@@ -21,6 +22,16 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Recipe Book App',
+        supportedLocales: AppLocalizations.supportedLocales,
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        localeResolutionCallback: (locale, supportedLocales) {
+          for (var supportedLocale in supportedLocales) {
+            if (supportedLocale.languageCode == locale?.languageCode) {
+              return supportedLocale;
+            }
+          }
+          return supportedLocales.first;
+        },
         home: RecipeBook(),
       ),
     );
