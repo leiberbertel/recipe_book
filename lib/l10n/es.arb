@@ -1,0 +1,8 @@
+{
+    "@@locale": "es",
+    "title": "Recetario",
+    "noRecipes": "No se encuentran recetas",
+    "noRecipesFavorites": "No se encuentran recetas favoritas",
+    "descriptionRecipesFavorites": "Tarjeta de recetas favoritas",
+    "tapRecipeDetail": "Toca para ver el detalle de la receta"
+}

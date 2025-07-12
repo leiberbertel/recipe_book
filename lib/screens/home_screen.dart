@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:recipe_book/providers/recipe_provider.dart';
 import 'package:recipe_book/screens/recipe_detail.dart';
+import 'package:recipe_book/utils/localization.dart';
 import 'package:recipe_book/widgets/text_primary.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,7 +21,9 @@ class HomeScreen extends StatelessWidget {
           if (provider.isLoading) {
             return const Center(child: CircularProgressIndicator());
           } else if (provider.recipes.isEmpty) {
-            return const Center(child: Text('No recipes found'));
+            return Center(
+              child: Text(appLocalizationInitialize(context).noRecipes),
+            );
           } else {
             return ListView.builder(
               itemCount: provider.recipes.length,

@@ -1,0 +1,8 @@
+{
+  "@@locale": "en",
+  "title": "Recipes Books",
+  "noRecipes": "No recipes found",
+  "noRecipesFavorites": "No favorites recipes",
+  "descriptionRecipesFavorites": "Favorite recipes card",
+  "tapRecipeDetail": "Click to see the detail of the recipe"
+}

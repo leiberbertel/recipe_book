@@ -1,4 +1,4 @@
-import 'package:recipe_book/utils/environment.dart';
+import 'package:recipe_book/utils/environments/environment.dart';
 
 class Paths {
   static final baseUrl = Uri.parse(Environment.baseUrl);
