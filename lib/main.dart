@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 import 'package:recipe_book/providers/recipe_provider.dart';
 import 'package:recipe_book/screens/home_screen.dart';
 import 'package:recipe_book/screens/favorites_recipes.dart';
 
-void main() {
+Future<void> main() async {
+  await dotenv.load(fileName: "assets/.env");
+
   runApp(const MyApp());
 }
 

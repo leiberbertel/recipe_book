@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:recipe_book/models/recipe_model.dart';
+import 'package:recipe_book/utils/constant.dart';
 
 class RecipesProvider extends ChangeNotifier {
   bool isLoading = false;
@@ -11,9 +12,7 @@ class RecipesProvider extends ChangeNotifier {
 
   Future<void> fetchRecipes() async {
     isLoading = true;
-    notifyListeners();
-
-    final url = Uri.parse('http://10.0.2.2:3000/recipes');
+    final url = Paths.baseUrl.replace(path: Paths.consultRecipes);
     try {
       final response = await http.get(url);
       if (response.statusCode == 200) {
@@ -22,7 +21,7 @@ class RecipesProvider extends ChangeNotifier {
           data['recipes'].map((recipe) => Recipe.fromJSON(recipe)),
         );
       } else {
-        print('Error {$response.statusCode}');
+        print('Error ${response.statusCode}');
         recipes = [];
       }
     } catch (e) {
@@ -30,13 +29,13 @@ class RecipesProvider extends ChangeNotifier {
       recipes = [];
     } finally {
       isLoading = false;
-      notifyListeners();
     }
+    notifyListeners();
   }
 
   Future<void> toggleFavoriteStatus(Recipe recipe) async {
     final isFavorite = favoriteRecipe.contains(recipe);
-    final url = Uri.parse('http://10.0.2.2:3000/favorites');
+    final url = Paths.baseUrl.replace(path: Paths.consultFavorites);
 
     try {
       final response = isFavorite
@@ -49,14 +48,12 @@ class RecipesProvider extends ChangeNotifier {
         } else {
           favoriteRecipe.add(recipe);
         }
-        notifyListeners();
       } else {
         throw Exception('Failed to update favorite recipe');
       }
     } catch (e) {
       print('Error updating favorite status $e');
-    } finally {
-      notifyListeners();
     }
+    notifyListeners();
   }
 }
