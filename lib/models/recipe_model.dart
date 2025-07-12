@@ -37,4 +37,12 @@ class Recipe {
   String toString() {
     return 'Recipe{id: $id, name: $name, author: $author, urlLink: $urlLink, recipe: $recipeSteps}';
   }
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Recipe && runtimeType == other.runtimeType && id == other.id;
+
+  @override
+  int get hashCode => id.hashCode;
 }

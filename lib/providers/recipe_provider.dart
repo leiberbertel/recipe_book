@@ -53,7 +53,7 @@ class RecipesProvider extends ChangeNotifier {
       }
     } catch (e) {
       print('Error updating favorite status $e');
-    } finally {}
+    }
     notifyListeners();
   }
 }
