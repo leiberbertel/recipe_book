@@ -11,8 +11,36 @@ class RecipeDetail extends StatefulWidget {
   State<RecipeDetail> createState() => _RecipeDetailState();
 }
 
-class _RecipeDetailState extends State<RecipeDetail> {
+class _RecipeDetailState extends State<RecipeDetail>
+    with SingleTickerProviderStateMixin {
   bool isFavorite = false;
+  late AnimationController _controller;
+  late Animation<double> _scaleAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _controller = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 300),
+    );
+
+    _scaleAnimation =
+        Tween<double>(begin: 1.0, end: 1.5).animate(
+          CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
+        )..addStatusListener((status) {
+          if (status == AnimationStatus.completed) {
+            _controller.reverse();
+          }
+        });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
+  }
 
   @override
   void didChangeDependencies() {
@@ -43,8 +71,15 @@ class _RecipeDetailState extends State<RecipeDetail> {
               setState(() {
                 isFavorite = !isFavorite;
               });
+              _controller.forward();
             },
-            icon: Icon(isFavorite ? Icons.favorite : Icons.favorite_border),
+            icon: ScaleTransition(
+              scale: _scaleAnimation,
+              child: Icon(
+                isFavorite ? Icons.favorite : Icons.favorite_border,
+                color: Colors.red,
+              ),
+            ),
           ),
         ],
       ),
