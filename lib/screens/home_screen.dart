@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:recipe_book/providers/recipe_provider.dart';
 import 'package:recipe_book/screens/recipe_detail.dart';
+import 'package:recipe_book/widgets/text_primary.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -97,16 +98,10 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                      recipe.name,
-                      style: TextStyle(fontSize: 16, fontFamily: 'QuickSand'),
-                    ),
+                    TextPrimary(text: recipe.name),
                     SizedBox(height: 4),
                     Container(height: 2, width: 75, color: Colors.orange),
-                    Text(
-                      'By ${recipe.author}',
-                      style: TextStyle(fontSize: 16, fontFamily: 'QuickSand'),
-                    ),
+                    TextPrimary(text: 'By ${recipe.author}'),
                     SizedBox(height: 4),
                   ],
                 ),
