@@ -16,4 +16,10 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get noRecipesFavorites => 'No se encuentran recetas favoritas';
+
+  @override
+  String get descriptionRecipesFavorites => 'Tarjeta de recetas favoritas';
+
+  @override
+  String get tapRecipeDetail => 'Toca para ver el detalle de la receta';
 }
