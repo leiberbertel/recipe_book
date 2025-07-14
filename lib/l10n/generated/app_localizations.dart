@@ -115,6 +115,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No favorites recipes'**
   String get noRecipesFavorites;
+
+  /// No description provided for @descriptionRecipesFavorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Favorite recipes card'**
+  String get descriptionRecipesFavorites;
+
+  /// No description provided for @tapRecipeDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Click to see the detail of the recipe'**
+  String get tapRecipeDetail;
 }
 
 class _AppLocalizationsDelegate
