@@ -33,7 +33,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get tabFavorites => 'Favoritos';
 
   @override
-  String get by => 'Hecho por ';
+  String get by => 'Hecho por';
 
   @override
   String get recipeSteps => 'Instrucciones';
