@@ -5,6 +5,7 @@ import 'package:recipe_book/l10n/generated/app_localizations.dart';
 import 'package:recipe_book/providers/recipe_provider.dart';
 import 'package:recipe_book/screens/home_screen.dart';
 import 'package:recipe_book/screens/favorites_recipes.dart';
+import 'package:recipe_book/utils/localization.dart';
 
 Future<void> main() async {
   await dotenv.load(fileName: "assets/.env");
@@ -54,8 +55,14 @@ class RecipeBook extends StatelessWidget {
             labelColor: Colors.white,
             unselectedLabelColor: Colors.white,
             tabs: [
-              Tab(icon: Icon(Icons.home), text: 'Home'),
-              Tab(icon: Icon(Icons.favorite), text: 'Favorites'),
+              Tab(
+                icon: Icon(Icons.home),
+                text: appLocalizationInitialize(context).tabHome,
+              ),
+              Tab(
+                icon: Icon(Icons.favorite),
+                text: appLocalizationInitialize(context).tabFavorites,
+              ),
             ],
           ),
         ),

@@ -55,7 +55,9 @@ class FavoriteRecipeCard extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: 125,
           child: Semantics(
-            label: 'Tarjeta de recetas favoritas',
+            label: appLocalizationInitialize(
+              context,
+            ).descriptionRecipesFavorites,
             hint: 'Toca para ver el detalle de la receta ${recipe.name}',
             child: Card(
               child: Row(
@@ -103,7 +105,7 @@ class FavoriteRecipeCard extends StatelessWidget {
                       SizedBox(height: 4),
                       Container(height: 2, width: 75, color: Colors.orange),
                       Text(
-                        'By ${recipe.author}',
+                        '${appLocalizationInitialize(context).by} ${recipe.author}',
                         style: TextStyle(fontSize: 16, fontFamily: 'QuickSand'),
                       ),
                       SizedBox(height: 4),
