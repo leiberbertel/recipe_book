@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:recipe_book/models/recipe_model.dart';
 import 'package:recipe_book/providers/recipe_provider.dart';
+import 'package:recipe_book/utils/localization.dart';
 
 class RecipeDetail extends StatefulWidget {
   final Recipe recipes;
@@ -106,9 +107,11 @@ class _RecipeDetailState extends State<RecipeDetail>
             SizedBox(height: 8),
             Text(widget.recipes.name),
             SizedBox(height: 8),
-            Text("By ${widget.recipes.author}"),
+            Text(
+              "${appLocalizationInitialize(context).by} ${widget.recipes.author}",
+            ),
             SizedBox(height: 8),
-            const Text('Recipe Steps:'),
+            Text("${appLocalizationInitialize(context).recipeSteps} :"),
             for (var step in widget.recipes.recipeSteps) Text("- $step"),
           ],
         ),

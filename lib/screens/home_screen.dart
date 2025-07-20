@@ -104,7 +104,10 @@ class HomeScreen extends StatelessWidget {
                     TextPrimary(text: recipe.name),
                     SizedBox(height: 4),
                     Container(height: 2, width: 75, color: Colors.orange),
-                    TextPrimary(text: 'By ${recipe.author}'),
+                    TextPrimary(
+                      text:
+                          "${appLocalizationInitialize(context).by} ${recipe.author}",
+                    ),
                     SizedBox(height: 4),
                   ],
                 ),
@@ -137,16 +140,18 @@ class RecipeForm extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Add New Recipe',
+              appLocalizationInitialize(context).addNewRecipe,
               style: TextStyle(color: Colors.orange, fontSize: 24),
             ),
             SizedBox(height: 16),
             _buildTextField(
               controller: recipeName,
-              label: 'Recipe Name',
+              label: appLocalizationInitialize(context).recipeName,
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter the name recipe';
+                  return appLocalizationInitialize(
+                    context,
+                  ).validatorFieldRecipeName;
                 }
                 return null;
               },
@@ -154,10 +159,12 @@ class RecipeForm extends StatelessWidget {
             SizedBox(height: 16),
             _buildTextField(
               controller: authorName,
-              label: 'Author',
+              label: appLocalizationInitialize(context).author,
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter the name author';
+                  return appLocalizationInitialize(
+                    context,
+                  ).validatorFieldAuthor;
                 }
                 return null;
               },
@@ -165,10 +172,12 @@ class RecipeForm extends StatelessWidget {
             SizedBox(height: 16),
             _buildTextField(
               controller: imageUrl,
-              label: 'Image Url',
+              label: appLocalizationInitialize(context).imageUrl,
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter the image url';
+                  return appLocalizationInitialize(
+                    context,
+                  ).validatorFieldImageUrl;
                 }
                 return null;
               },
@@ -177,10 +186,12 @@ class RecipeForm extends StatelessWidget {
             _buildTextField(
               maxLines: 4,
               controller: recipeDescription,
-              label: 'Recipe',
+              label: appLocalizationInitialize(context).recipe,
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter the recipe';
+                  return appLocalizationInitialize(
+                    context,
+                  ).validatorFieldRecipe;
                 }
                 return null;
               },
@@ -200,7 +211,7 @@ class RecipeForm extends StatelessWidget {
                   ),
                 ),
                 child: Text(
-                  'Save Recipe',
+                  appLocalizationInitialize(context).saveRecipe,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,

@@ -4,5 +4,20 @@
   "noRecipes": "No recipes found",
   "noRecipesFavorites": "No favorites recipes",
   "descriptionRecipesFavorites": "Favorite recipes card",
-  "tapRecipeDetail": "Click to see the detail of the recipe"
+  "tapRecipeDetail": "Click to see the detail of the recipe",
+  "favoriteRecipesCard": "Favorite recipes card",
+  "tabHome": "Home",
+  "tabFavorites": "Favorites",
+  "by": "By ",
+  "recipeSteps": "Recipe Steps",
+  "addNewRecipe": "Add New Recipe",
+  "recipeName": "Recipe Name",
+  "author": "Author",
+  "imageUrl": "Image Url",
+  "recipe": "Recipe",
+  "saveRecipe": "Save Recipe",
+  "validatorFieldRecipeName": "Please enter the name recipe",
+  "validatorFieldAuthor": "Please enter the name author",
+  "validatorFieldImageUrl": "Please enter the image url",
+  "validatorFieldRecipe": "Please enter the recipe"
 }

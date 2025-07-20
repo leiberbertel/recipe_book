@@ -127,6 +127,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Click to see the detail of the recipe'**
   String get tapRecipeDetail;
+
+  /// No description provided for @favoriteRecipesCard.
+  ///
+  /// In en, this message translates to:
+  /// **'Favorite recipes card'**
+  String get favoriteRecipesCard;
+
+  /// No description provided for @tabHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get tabHome;
+
+  /// No description provided for @tabFavorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Favorites'**
+  String get tabFavorites;
+
+  /// No description provided for @by.
+  ///
+  /// In en, this message translates to:
+  /// **'By '**
+  String get by;
+
+  /// No description provided for @recipeSteps.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipe Steps'**
+  String get recipeSteps;
+
+  /// No description provided for @addNewRecipe.
+  ///
+  /// In en, this message translates to:
+  /// **'Add New Recipe'**
+  String get addNewRecipe;
+
+  /// No description provided for @recipeName.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipe Name'**
+  String get recipeName;
+
+  /// No description provided for @author.
+  ///
+  /// In en, this message translates to:
+  /// **'Author'**
+  String get author;
+
+  /// No description provided for @imageUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'Image Url'**
+  String get imageUrl;
+
+  /// No description provided for @recipe.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipe'**
+  String get recipe;
+
+  /// No description provided for @saveRecipe.
+  ///
+  /// In en, this message translates to:
+  /// **'Save Recipe'**
+  String get saveRecipe;
+
+  /// No description provided for @validatorFieldRecipeName.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter the name recipe'**
+  String get validatorFieldRecipeName;
+
+  /// No description provided for @validatorFieldAuthor.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter the name author'**
+  String get validatorFieldAuthor;
+
+  /// No description provided for @validatorFieldImageUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter the image url'**
+  String get validatorFieldImageUrl;
+
+  /// No description provided for @validatorFieldRecipe.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter the recipe'**
+  String get validatorFieldRecipe;
 }
 
 class _AppLocalizationsDelegate
