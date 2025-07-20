@@ -149,7 +149,7 @@ abstract class AppLocalizations {
   /// No description provided for @by.
   ///
   /// In en, this message translates to:
-  /// **'By '**
+  /// **'By'**
   String get by;
 
   /// No description provided for @recipeSteps.
