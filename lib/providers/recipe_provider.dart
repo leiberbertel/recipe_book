@@ -14,7 +14,9 @@ class RecipesProvider extends ChangeNotifier {
     isLoading = true;
     final url = Paths.baseUrl.replace(path: Paths.consultRecipes);
     try {
-      final response = await http.get(url);
+      final response = await http
+          .get(url)
+          .timeout(Duration(seconds: ClientConfig.timeout));
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         recipes = List<Recipe>.from(
@@ -40,7 +42,9 @@ class RecipesProvider extends ChangeNotifier {
     try {
       final response = isFavorite
           ? await http.delete(url, body: json.encode({"id": recipe.id}))
-          : await http.post(url, body: json.encode(recipe.toJson()));
+          : await http
+                .post(url, body: json.encode(recipe.toJson()))
+                .timeout(Duration(seconds: ClientConfig.timeout));
 
       if (response.statusCode == 200) {
         if (isFavorite) {

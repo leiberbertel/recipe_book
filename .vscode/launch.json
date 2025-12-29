@@ -1,0 +1,22 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "App Recipe Book",
+            "program": "lib/main.dart",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug"
+        },
+        {
+            "name": "test",
+            "type": "dart",
+            "request": "launch",
+            "program": "test/",
+            "args": [
+                "--coverage"
+            ],
+            "postDebugTask": "Coverage Report"
+        },
+    ],
+}
