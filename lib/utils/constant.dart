@@ -5,3 +5,7 @@ class Paths {
   static final String consultRecipes = "/recipes";
   static final String consultFavorites = "/favorites";
 }
+
+class ClientConfig {
+  static final int timeout = 10;
+}
