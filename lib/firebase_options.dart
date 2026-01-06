@@ -50,19 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAPYhDx3E5_rKFI6bEi_tB1WYtjxJxLKog',
-    appId: '1:550621064626:android:5c093466557c2b56e2c8ab',
-    messagingSenderId: '550621064626',
-    projectId: 'workspace-f63a1',
-    storageBucket: 'workspace-f63a1.firebasestorage.app',
+    apiKey: 'AIzaSyAoFxrVZFnQ3qGUVCDVGmlGso7ONnA5phg',
+    appId: '1:814004986218:android:631f4c303038b1182fc513',
+    messagingSenderId: '814004986218',
+    projectId: 'apps-mobile-workspace',
+    storageBucket: 'apps-mobile-workspace.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBXurnlkKtEXkVSwhuVwMfF2O4rrNvkdXY',
-    appId: '1:550621064626:ios:a11e81e2ac7c4a09e2c8ab',
-    messagingSenderId: '550621064626',
-    projectId: 'workspace-f63a1',
-    storageBucket: 'workspace-f63a1.firebasestorage.app',
+    apiKey: 'AIzaSyAEi3bgOUsll1LsLe133JFHn6YKKqibeJQ',
+    appId: '1:814004986218:ios:70c2d06744b8996c2fc513',
+    messagingSenderId: '814004986218',
+    projectId: 'apps-mobile-workspace',
+    storageBucket: 'apps-mobile-workspace.firebasestorage.app',
     iosBundleId: 'com.example.testExample',
   );
 }
